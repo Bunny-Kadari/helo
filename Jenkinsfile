@@ -11,10 +11,10 @@ pipeline {
     stages {
 
         stage('Clone Code') {
-            steps {
-                git 'https://github.com/Bunny-Kadari/helo.git'
-            }
-        }
+    steps {
+        git branch: 'main', url: 'https://github.com/Bunny-Kadari/helo.git'
+    }
+}
 
         stage('Build Docker Image') {
             steps {
